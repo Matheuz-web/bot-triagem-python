@@ -32,9 +32,9 @@ def classificar_com_ia(texto_do_cliente):
         "Você é um robô de triagem de suporte técnico. "
         "Analise o problema do cliente e responda APENAS com uma das três categorias exatas abaixo, "
         "sem nenhuma outra palavra, saudação ou ponto final:\n"
-        "1 - Técnico - Internet\n"
-        "2 - Financeiro\n"
-        "3 - Comercial / Planos\n"
+        "Técnico - Internet\n"
+        "Financeiro\n"
+        "Comercial / Planos\n"
         f"Problema do cliente: '{texto_do_cliente}'"
     )
     
@@ -50,7 +50,7 @@ def classificar_com_ia(texto_do_cliente):
         )
     
         texto_ia = resposta.choices[0].message.content
-        
+
         # a IA retornaa uma categoria, caso contrario, retorna "Outros / Não Identificado"
         if texto_ia:
             return texto_ia.strip()
